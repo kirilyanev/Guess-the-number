@@ -1,0 +1,25 @@
+body {
+    background-image: url(./cool-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+  }
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    
+}
+ul li {
+    list-style-type: none;
+}
+.hidden {
+    display: none;
+}
+
+#input{
+    font-size: 22px;
+    font-family: monospace;
+}
+.main{
+    text-align: center;
+}
