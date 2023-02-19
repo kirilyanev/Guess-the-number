@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <title>Guess the Number</title>
 </head>
 <body>
+    <div class="main">
+        <h1>Guess the Number</h1>
+        <h3>Game rules:</h3>
+        <ul>
+            <li>The computer will choose a random number from <strong>1 to 100</strong>.</li>
+            <li>Your task is to guess it! But there is a catch!</li>
+            <li>You have only 10 free turns. After that, you lose points for each guess! So choose wisely!</li>
+    </div>
 
-    <h1>Guess the Number</h1>
-    <h3>Game rules:</h3>
-    <ul>
-        <li>The computer will choose a random number from <strong>1-100</strong>.</li>
-        <li>Your task is to guess it! But there is a catch!</li>
-        <li>You have only 10 free turns. After that, you lose points for each guess! So choose wisely!</li>
     </ul>
-    <div class="form">
+    <div class="main">
         <label for="guess">Enter your guess:</label>
-        <input type="text" id="input">
+        <input type="number" id="input">
         <input type="submit" value="Submit guess" id="submit">
     </div>
-    <div class="result">
+    <div class="main">
         <p id="guesses">Guesses: </p>
-        <p id="win">Congratulations! You Win!</p>
-        <p><i class="fa-solid fa-check"></i></p>
+        <p class="hidden" id="error">You have to enter a number between 1-100</p>
+        <p class="hidden" id="repeat">Try again with another number</p>
+        <p class="hidden" id="win">Congratulations! You Win!</p>
     </div>
     
     <script src="app.js"></script>
