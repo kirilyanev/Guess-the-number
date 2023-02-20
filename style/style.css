@@ -1,25 +1,116 @@
 body {
-    background-image: url(./cool-background.png);
+    background-image: url(./pngtree-hand-drawn-education-math-background-picture-image_1176980.jpg);
+    margin-top: 120px;
+    margin-left: 250px;
+    /* background-image: url(./background11.png);
     background-repeat: no-repeat;
     background-size: cover;
-    color: black;
-  }
+    color: black; */
+}
+
 h1 {
     text-align: center;
     font-size: 3rem;
-    
+    margin-bottom: 15px;
 }
+
 ul li {
     list-style-type: none;
 }
+
 .hidden {
     display: none;
+}
+
+.main{
+    text-align: center;
 }
 
 #input{
     font-size: 22px;
     font-family: monospace;
+    margin-left: 10px;
 }
-.main{
+
+#input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+}
+#label {
+    font-size: 20px;
+}
+#guesses {
+    font-size: 25px;
+}
+
+#error{
+    background-color: rgba(255, 0, 0, 0.923);
+    color: white;
+    margin: auto;
+    min-height: 30px;
+    padding: 5px;
+    font-size: 25px;
+    margin-top: 50px;
+}
+#result {
     text-align: center;
+}
+
+#restart {
+    margin: auto;
+    min-height: 30px;
+    min-width: 65px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.submit{
+    margin-left: 10px;
+    /* background-color:rgba(237, 237, 4, 0.854); */
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 20px;
+    padding:12px;
+    min-height:30px;
+    min-width: 120px;
+}
+
+.submit:hover{
+    color: white;
+    background-color: rgba(194,219,216,255);
+    transition: 0.3s;
+}
+
+#win {
+    /* background-color: rgba(3, 201, 3, 0.845); */
+    background-color: rgba(52,66,93,255);
+    color: aliceblue;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: -10px;
+}
+
+#lose {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: -5px;
+}
+
+.noHover{
+    pointer-events: none;
+    margin-left: 10px;
+    /* background-color:rgba(237, 237, 4, 0.854); */
+    background-color: rgba(194,219,216,255);
+    font-size: 20px;
+    border-radius: 10px;
+    padding:12px;
+    min-height:30px;
+    min-width: 120px;
 }

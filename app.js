@@ -1,13 +1,16 @@
 let randomNumber = Math.floor(Math.random() * 100);
+let guesses = ['Guesses: '];
+
 const inputElement = document.querySelector('#input');
 const guessesElement = document.querySelector('#guesses');
-const winnerElement = document.querySelector('#win');
 const errorElement = document.querySelector('#error');
 const repeatElement = document.querySelector('#repeat');
-const submitBtn = document.querySelector('#submit');
+const winnerElement = document.querySelector('#win');
+const loseElement = document.querySelector('#lose');
+const submitBtn = document.querySelector('.submit');
+const restartBtn = document.querySelector('#restart');
 console.log(randomNumber);
 submitBtn.addEventListener('click',checkGuess);
-let guesses = [];
 
 function checkGuess() {
     repeatElement.style.display = 'none';
@@ -16,8 +19,8 @@ function checkGuess() {
     let input = Number(inputElement.value);
     let symbol = '';
 
-    if(input < 0 || input > 100) {
-        errorElement.style.display = 'block';
+    if(input <= 0 || input > 100) {
+        errorElement.style.display = 'inline';
         return;
     }
 
@@ -25,22 +28,38 @@ function checkGuess() {
         repeatElement.style.display = 'block';
         return;
     }
+
     if(randomNumber > input) {
         symbol = '↑';
     } else if (randomNumber < input) {
         symbol = '↓';
     } else if (randomNumber == input) {
+        // WIN
         submitBtn.disabled = true;
-        winnerElement.style.display = 'block';
+        submitBtn.className = 'noHover';
+        inputElement.disabled = true;
+        winnerElement.style.display = 'inline-block';
+        restartBtn.style.display = 'block';
+        restartBtn.addEventListener('click',restart);
         inputElement.value = '';
         return;
     }
 
     guesses.push(input,symbol);
-    guessesElement.textContent = guesses.join(' ');
+    guessesElement.textContent = guesses.join('    ');
     inputElement.value = '';
+
+    // LOSE
+    if (guesses.length == 21) {
+        loseElement.style.display = 'inline-block';
+        restartBtn.style.display = 'block';
+        restartBtn.addEventListener('click',restart);
+        submitBtn.disabled = true;
+        submitBtn.className = 'noHover';
+        inputElement.disabled = true;
+    }
 }
 
-function inputValidation(input) {
-    
+function restart() {
+    location.reload();
 }

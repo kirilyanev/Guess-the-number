@@ -19,15 +19,18 @@
 
     </ul>
     <div class="main">
-        <label for="guess">Enter your guess:</label>
-        <input type="number" id="input">
-        <input type="submit" value="Submit guess" id="submit">
+        <label id="label">Enter your guess:</label>
+        <input type="number" id="input" style="width: 100px; height: 25px;">
+        <!-- <input type="submit" value="Submit" id="submit"> -->
+        <button class="submit"><strong>Submit</strong></button>
     </div>
-    <div class="main">
+    <div class="main" id="result">
         <p id="guesses">Guesses: </p>
-        <p class="hidden" id="error">You have to enter a number between 1-100</p>
+        <p class="hidden" id="error"><strong>You have to enter a number between 1-100!!!</strong></p>
         <p class="hidden" id="repeat">Try again with another number</p>
-        <p class="hidden" id="win">Congratulations! You Win!</p>
+        <p class="hidden" id="win"><strong>Congratulations! You Win!</strong></p>
+        <p class="hidden" id="lose">You lost! GAME OVER!!!</p>
+        <button class="hidden" id="restart">Restart</button>
     </div>
     
     <script src="app.js"></script>
