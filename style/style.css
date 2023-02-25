@@ -1,0 +1,44 @@
+.container-main-grid{
+    display: grid;
+    grid-template-columns: 1fr 700px 1fr;
+}
+
+.header {
+    text-align: center;
+}
+.rules-div {
+    border: 2px solid rgb(0, 0, 0);
+    text-align: center;
+}
+/* .game {
+    border: 2px solid rgb(0, 0, 0);
+    margin-right: 20px;
+    margin-left: 20px;
+} */
+.result-div {
+    border: 2px solid rgb(0, 0, 0);
+    text-align: center;
+}
+
+.container-game {
+    border: 2px solid rgb(0, 0, 0);
+    margin-right: 20px;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 10px;
+}
+/* Conteiner-game divs */
+.submit-div {
+    margin-left: 10px;
+    height: 275px;
+}
+.facts-div {
+    margin-right: 10px;
+}
+.message-div {
+    margin-left: 10px;
+}
+.claim-points-div {
+    margin-right: 10px;
+}
