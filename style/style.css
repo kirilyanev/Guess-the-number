@@ -1,60 +1,95 @@
-.container-main-grid{
+body {
+    margin: 10px 40px;
+}
+.container-main-grid {
     display: grid;
     grid-template-columns: 1fr 700px 1fr;
 }
 
-.header {
+h1 {
     text-align: center;
+    font-size: 25px;
 }
+.header-div{
+    border: 1px solid rgb(0, 0, 0);
+}
+#hearts {
+    display: inline-block;
+    background-color: lightblue;
+    font-size: 25px;
+}
+#level {
+    display: inline-block;
+    background-color: lightpink;
+    font-size: 25px;
+
+}
+#range {
+    background-color: lightblue;
+
+    font-size: 25px;
+
+}
+
 .rules-div {
     border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
     text-align: center;
 }
-/* .game {
-    border: 2px solid rgb(0, 0, 0);
-    margin-right: 20px;
-    margin-left: 20px;
-} */
+
 .result-div {
     border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
     text-align: center;
 }
 
 .container-game {
     border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
     margin-right: 20px;
     margin-left: 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 10px;
 }
+
 /* Conteiner-game divs */
 .submit-div {
     margin-top: 10px;
     margin-left: 30px;
     height: 275px;
 }
-.facts-div {
+
+.hints-div {
     margin-top: 10px;
     margin-right: 30px;
 }
+
 .message-div {
     margin-left: 30px;
     margin-bottom: 10px;
 }
+
 .claim-points-div {
     margin-right: 30px;
     margin-bottom: 10px;
 }
+
 #claim-points-button {
     margin-top: 15px;
     margin-left: 50px;
 }
 
 /* Inside conteiner-game divs */
-.submits {
-    margin-top: 25px;
+.ul-submits {
+    margin: 25px;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+
 }
-.submits li {
-    margin-top: 15px;
+.ul-submits li::before {
+    content: attr(data-icon);
+    font-size: 1em;
 }

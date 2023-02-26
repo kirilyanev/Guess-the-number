@@ -13,28 +13,40 @@
     <section class="header">
         <div>
             <h1>GUESS THE NUMBER</h1>
-            <h3>LEVEL 1</h3>
+        </div>
+        <div class="header-div">
+            <span id="hearts">&#9825; &#9825; &#9825; &#9825; &#9825;</span>
+            <h3 id="level">LEVEL 1</h3>
+            <span id="range">Range: 1-100</span>
         </div>
     </section>
     <div class="container-main-grid">
         <div class="rules-div">
             <p>GAME RULES</p>
+            <ul class="game-rules">
+                <li><em>The computer will choose a random number in the current range</em></li>
+                <li>You get one hint about the number</li>
+                <li>Your task is to guess it</li>
+                <li>You have 5 hearts. After each wrong guess, you lose one heart</li>
+                <li></li>
+
+            </ul>
         </div>
         <section class="container-game">
             <div class="submit-div">
                 <p>ENTER YOUR GUESS</p>
                 <input type="number">
                 <button>SUBMIT</button>
-                <ul class="submits">
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
+                <ul class="ul-submits">
+                    <li data-icon="&#10005; ">Lorem ipsum dolor sit amet.</li>
+                    <li data-icon="&#10005; ">Lorem ipsum dolor sit amet.</li>
+                    <li data-icon="&#10005; ">Lorem ipsum dolor sit amet.</li>
+                    <li data-icon="&#10004; ">Lorem ipsum dolor sit amet.</li>
+                    <li data-icon="&#10003; ">Lorem ipsum dolor sit amet.</li>
                 </ul>
             </div>
-            <div class="facts-div">
-                <p>Current Number Fact</p>
+            <div class="hints-div">
+                <p>Number Hint</p>
                 <p>Some random fact: Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, facilis.</p>
             </div>
             <div class="message-div">
@@ -47,12 +59,12 @@
 
         <div class="result-div">
             <p>RESULT</p>
-            <p>Total Points</p>
             <ul>
-                <li>Try 1</li>
-                <li>Try 2</li>
-                <li>Try 3</li>
+                <li>4/5</li>
+                <li>4/5</li>
+                <li>2/5</li>
             </ul>
+            <p>Total Points</p>
             <p>550</p>
         </div>
     </div>
