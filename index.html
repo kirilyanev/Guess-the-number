@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
+    <script src="app.js" type="module"></script>
     <title>GUESS THE NUMBER</title>
 </head>
 
@@ -24,7 +25,7 @@
         <div class="rules-div">
             <p>GAME RULES</p>
             <ul class="game-rules">
-                <li><em>The computer will choose a random number in the current range</em></li>
+                <li>The computer will choose a random number in the current range</li>
                 <li>You get one hint about the number</li>
                 <li>Your task is to guess it</li>
                 <li>You have 5 hearts. After each wrong guess, you lose one heart</li>
@@ -35,8 +36,8 @@
         <section class="container-game">
             <div class="submit-div">
                 <p>ENTER YOUR GUESS</p>
-                <input type="number">
-                <button>SUBMIT</button>
+                <input type="number" id="input">
+                <button id="submit">SUBMIT</button>
                 <ul class="ul-submits">
                     <li data-icon="&#10005; ">Lorem ipsum dolor sit amet.</li>
                     <li data-icon="&#10005; ">Lorem ipsum dolor sit amet.</li>

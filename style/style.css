@@ -12,23 +12,21 @@ h1 {
 }
 .header-div{
     border: 1px solid rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 #hearts {
-    display: inline-block;
     background-color: lightblue;
     font-size: 25px;
 }
 #level {
-    display: inline-block;
     background-color: lightpink;
     font-size: 25px;
 
 }
 #range {
     background-color: lightblue;
-
     font-size: 25px;
-
 }
 
 .rules-div {
@@ -92,4 +90,19 @@ h1 {
 .ul-submits li::before {
     content: attr(data-icon);
     font-size: 1em;
+}
+
+/* Experimenting with layout flex */
+@media (max-width: 900px) {
+    .container-main-grid{
+        grid-template-columns: 1fr;
+    }
+    .message-div p {
+        margin-top: 20px;
+    }
+    .rules-div {
+    }
+    .game-rules {
+        width: max-content;
+    }
 }
