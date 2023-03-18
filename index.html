@@ -1,77 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
-    <script src="app.js" type="module"></script>
-    <title>GUESS THE NUMBER</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" type="module"></script>
+    <title>Guess the Number</title>
 </head>
-
 <body>
-    <section class="header">
-        <div>
-            <h1>GUESS THE NUMBER</h1>
-        </div>
-        <div class="header-div">
-            <span id="hearts">&#9825; &#9825; &#9825; &#9825; &#9825;</span>
-            <h3 id="level">LEVEL 1</h3>
-            <span id="range">Range: 1-100</span>
-        </div>
-    </section>
-    <div class="container-main-grid">
-        <div class="rules-div">
-            <p>GAME RULES</p>
-            <ul class="game-rules">
-                <li>The computer will choose a random number in the current range</li>
-                <li>You get one hint about the number</li>
-                <li>Your task is to guess it</li>
-                <li>You have 5 hearts. After each wrong guess, you lose one heart</li>
-                <li></li>
-
-            </ul>
-        </div>
-        <section class="container-game">
-            <div class="submit-div">
-                <p>ENTER YOUR GUESS</p>
-                <input type="number" id="input">
-                <button id="submit">SUBMIT</button>
-                <ul class="ul-submits">
-                    <li data-icon="&#10005; ">Lorem ipsum dolor sit amet.</li>
-                    <li data-icon="&#10005; ">Lorem ipsum dolor sit amet.</li>
-                    <li data-icon="&#10005; ">Lorem ipsum dolor sit amet.</li>
-                    <li data-icon="&#10004; ">Lorem ipsum dolor sit amet.</li>
-                    <li data-icon="&#10003; ">Lorem ipsum dolor sit amet.</li>
-                </ul>
-            </div>
-            <div class="hints-div">
-                <p>Number Hint</p>
-                <p>Some random fact: Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, facilis.</p>
-            </div>
-            <div class="message-div">
-                <p>Message: Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, vitae?</p>
-            </div>
-            <div class="claim-points-div">
-                <button id="claim-points-button">Claim Points</button>
-            </div>
-        </section>
-
-        <div class="result-div">
-            <p>RESULT</p>
-            <ul>
-                <li>4/5</li>
-                <li>4/5</li>
-                <li>2/5</li>
-            </ul>
-            <p>Total Points</p>
-            <p>550</p>
-        </div>
+    <section class="main">
+    <div class="header">
+        <h1>Guess the Number</h1>
+        <h3>Game rules:</h3>
+        <ul>
+            <li>The computer will choose a random number from <strong>1 to 100</strong>.</li>
+            <li>Your task is to guess it! But there is a catch!</li>
+            <li>You have only 10 free turns. So choose wisely!</li>
     </div>
-    <section class="footer">
-        <p>&#169; All Rights Reserved</p>
+
+    </ul>
+    <div class="user-input">
+        <form>
+            <label id="label">Enter your guess:</label>
+            <input type="number" id="input" style="width: 100px; height: 25px;">
+            <button class="submit"><strong>Submit</strong></button>
+        </form>
+    </div>
+    <div class="feedback" id="result">
+        <p id="guesses">Guesses: </p>
+        <p class="hidden" id="error">You have to enter a number between 1-100</p>
+        <p class="hidden" id="repeat">Try again with another number</p>
+        <p class="hidden" id="win">Congratulations!<br>You Win!</p>
+        <p class="hidden" id="lose">GAME OVER</p>
+        <button class="hidden" id="restart">Restart</button>
+    </div>
     </section>
 </body>
-
 </html>

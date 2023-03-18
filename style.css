@@ -1,11 +1,5 @@
 body {
-    background-image: url(./cool-background.png);
-    margin-top: 120px;
-    margin-left: 250px;
-    /* background-image: url(./background11.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: black; */
+    background-color: rgb(200, 200, 200);
 }
 
 h1 {
@@ -37,16 +31,32 @@ ul li {
     -webkit-appearance: none;
     margin: 0;
 }
+
 #label {
     font-size: 20px;
 }
+
 #guesses {
     font-size: 25px;
+}
+
+#repeat{
+    background-color: rgba(251, 255, 0, 0.923);
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    min-height: 30px;
+    padding: 5px;
+    font-size: 25px;
+    margin-top: 50px;
 }
 
 #error{
     background-color: rgba(255, 0, 0, 0.923);
     color: white;
+    border: 2px solid black;
+    border-radius: 5px;
     margin: auto;
     min-height: 30px;
     padding: 5px;
@@ -61,16 +71,23 @@ ul li {
     margin: auto;
     min-height: 30px;
     min-width: 65px;
-    background: black;
-    color: white;
+    background: yellow;
+    color: black;
     font-size: 20px;
     padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+    margin-top: 15px;
+}
+#restart:hover{
+    box-shadow: 0px 0px 0px black;
+    cursor: pointer;
+
 }
 
 .submit{
     margin-left: 10px;
-    /* background-color:rgba(237, 237, 4, 0.854); */
-    background-color: transparent;
+    background-color:rgba(237, 237, 4, 0.854);
     border-radius: 10px;
     font-size: 20px;
     padding:12px;
@@ -79,25 +96,31 @@ ul li {
 }
 
 .submit:hover{
-    color: white;
-    background-color: rgba(194,219,216,255);
+    background-color: yellow;
+    color: black;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 #win {
-    /* background-color: rgba(3, 201, 3, 0.845); */
-    background-color: rgba(52,66,93,255);
-    color: aliceblue;
     font-size: 35px;
     font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-color: rgb(25, 147, 25);
+    border: 2px solid black;
+    border-radius: 5px;
     padding: 5px;
     margin-bottom: 5px;
     margin-top: -10px;
 }
 
 #lose {
-    color: white;
-    background-color: black;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(224, 67, 67);
+    border: 2px solid black;
+    border-radius: 5px;
     padding: 10px;
     margin-bottom: 5px;
     margin-top: -5px;
@@ -106,8 +129,7 @@ ul li {
 .noHover{
     pointer-events: none;
     margin-left: 10px;
-    /* background-color:rgba(237, 237, 4, 0.854); */
-    background-color: rgba(194,219,216,255);
+    background-color: rgba(206, 206, 206, 0.582);
     font-size: 20px;
     border-radius: 10px;
     padding:12px;
